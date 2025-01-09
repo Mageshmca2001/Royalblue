@@ -59,57 +59,48 @@ class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-
 <div id="overlay" class="sidebar-overlay fixed inset-0 z-30 hidden bg-black bg-opacity-50 md:bg-opacity-0"></div>
 
 <!-- Sidebar -->
-<aside id="sidebar" class="fixed top-0 left-0 z-50 w-64 h-screen transition-transform -translate-x-full"
+<aside id="sidebar" class="fixed top-0 left-0 z-50 h-screen transition-all duration-300 ease-in-out w-64"
 style="background: linear-gradient(319deg, royalblue 0%, rgba(65, 105, 225, 0.7) 37%, rgba(0, 0, 128, 0.7) 100%), url('../script/Mac.jpg'); background-size: cover; background-position: center;">
 
-
-
-<!-- Sidebar content remains the same -->
-<div class="flex items-center justify-between p-4 border-b border-white">
-<div class="flex items-center space-x-3">
-<div class="bg-white p-2 rounded-lg shadow-md">
-<img src="../script/lg.png" alt="Logo" class="w-10 h-10 object-cover">
+<!-- Updated logo section -->
+<div class="logo-container flex items-center justify-between p-2 border-b border-white">
+<div class="flex items-center min-w-0">
+<div class="flex-shrink-0 bg-white p-2 rounded-lg shadow-md">
+<img src="../script/lg.png" alt="Logo" class="w-8 h-8  object-cover">
 </div>
-<span class="text-white text-base1 font-bold font-['Poppins']">BGT Dashboard</span>
+<span class="nav-text ml-3 text-white text-base1 font-bold font-['Poppins'] truncate">BGT Dashboard</span>
 </div>
-<button id="closeSidebarBtn" class="text-gray-400 hover:text-white p-2 md:hidden">
+<button id="closeSidebarBtn" class="text-gray-400 hover:text-white p-2 md:hidden ml-2">
 <i class='bx bx-x text-white text-3xl'></i>
 </button>
 </div>
 
 <div class="h-full px-3 py-4 overflow-y-auto">
 <ul class="space-y-2">
-
+<!-- Dashboard Item -->
 <li>
 <a href="index.html" class="flex items-center p-3 text-white rounded-lg hover:bg-gray-200 group">
-<i class='bx bxs-dashboard text-xl text-white group-hover:text-black'></i>
-<span class="ml-3 text-white group-hover:text-black font-['Poppins']">Dashboard</span>
+<i class='bx bxs-dashboard text-xl text-white group-hover:text-black flex-shrink-0'></i>
+<span class="nav-text ml-3 text-white group-hover:text-black font-['Poppins'] truncate">Dashboard</span>
 </a>
 </li>
 
 <li class="relative">
 <button
-onclick="toggleDropdown('reportsDropdown')"
-class="flex items-center p-3 text-white rounded-lg hover:bg-gray-200 group w-full"
+class="dropdown-trigger flex items-center w-full p-3 text-white rounded-lg hover:bg-gray-200 group"
 >
-<i class="bx bxs-file text-xl text-white group-hover:text-black"></i>
-<span class="ml-3 text-white  group-hover:text-black font-['Poppins']">Reports</span>
-<i id="dropdownIcon" class="bx bx-chevron-down ml-auto text-lg text-semibold text-white group-hover:text-black"></i>
+<i class="bx bxs-file text-xl text-white group-hover:text-black flex-shrink-0"></i>
+<span class="nav-text ml-3 text-white group-hover:text-black font-['Poppins'] truncate">Reports</span>
+<i class="dropdown-arrow bx bx-chevron-down ml-auto text-white group-hover:text-black"></i>
 </button>
-<!-- Dropdown -->
-<ul
-id="reportsDropdown"
-class="hidden absolute left-0 w-full mt-2 space-y-2 bg-gray-200 rounded-lg shadow-lg"
->
+<ul class="dropdown-content hidden mt-2 space-y-2 bg-gray-200 rounded-lg">
 <li>
-<a
-href="Dailyreports.html"
-class="flex items-center p-2 text-gray-800 rounded-lg hover:bg-white"
->
-<i class="bx bx-timer text-base text-gray-800"></i>
-<span class="ml-2">Daily Reports</span>
+<a href="Dailyreports.html" class="flex items-center px-3 py-2 text-gray-800 rounded-lg hover:bg-white">
+<i class="bx bx-timer text-base text-gray-800 flex-shrink-0"></i>
+<span class="nav-text ml-2 truncate">Daily Reports</span>
 </a>
 </li>
+
 <li>
 <a
 href="monthlyreports.html"
@@ -133,20 +124,12 @@ class="flex items-center p-2 text-gray-800 rounded-lg hover:bg-white"
 
 <li>
 <a href="user.html" class="flex items-center p-3 text-white rounded-lg hover:bg-gray-200 group">
-<i class='bx bxs-group text-xl text-white group-hover:text-black'></i>
-<span class="ml-3 text-white group-hover:text-black font-['Poppins']">Users</span>
+<i class='bx bxs-group text-xl text-white group-hover:text-black flex-shrink-0'></i>
+<span class="nav-text ml-3 text-white group-hover:text-black font-['Poppins'] truncate">Users</span>
 </a>
 </li>
-<li>
 </ul>
 </div>
-
-
-
-
-
-
-
 </aside>
 
 <!-- Header and Main Content -->
