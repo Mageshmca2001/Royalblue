@@ -172,13 +172,13 @@ class="flex items-center p-2 text-gray-800 rounded-lg hover:bg-white"
 
 <main class="flex-1 p-2 mt-16">
 
-    <div 
-    class="text-3xl font-bold font-['Poppins'] px-6 p-2" 
-    style="background: linear-gradient(319deg, royalblue 0%, rgba(65, 105, 225, 0.7) 37%, rgba(0, 0, 128, 0.7) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
-  >
-    Dashboard
-  </div>
-  
+<div 
+class="text-3xl font-bold font-['Poppins'] px-6 p-2" 
+style="background: linear-gradient(319deg, royalblue 0%, rgba(65, 105, 225, 0.7) 37%, rgba(0, 0, 128, 0.7) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+>
+Dashboard
+</div>
+
 
 <h1 class=" text-1xl text-gray-600 font-bold font-['poppins'] px-6  p-1">Management Information System </h1>
 
@@ -195,14 +195,14 @@ class="flex items-center p-2 text-gray-800 rounded-lg hover:bg-white"
 <p class="text-xl font-semibold text-white">Present Day</p>
 </div>
 <div class="mt-6 flex justify-center space-x-4">
-    <div class="bg-orange-700 text-white px-6 py-3 rounded-lg shadow-lg shadow-indigo-500/50 text-center transform hover:scale-105 transition duration-300 ease-in-out">
-        Tested : 3000
-    </div>
-    <div class="bg-green-700 text-white px-6 py-3 rounded-lg shadow-lg shadow-green-500/50 text-center transform hover:scale-105 transition duration-300 ease-in-out">
-        Completed : 500
-    </div>
-    
-    
+<div class="bg-gray-200 text-blue-500 font-bold px-6 py-3 rounded-lg shadow-lg shadow-black-500/50 text-center transform hover:scale-105 transition duration-300 ease-in-out">
+Tested : 3000
+</div>
+<div class="bg-gray-200 text-blue-500 font-bold px-6 py-3 rounded-lg shadow-lg shadow-black-500/50 text-center transform hover:scale-105 transition duration-300 ease-in-out">
+Completed : 500
+</div>
+
+
 </div>
 </div>
 
@@ -216,10 +216,10 @@ class="flex items-center p-2 text-gray-800 rounded-lg hover:bg-white"
 <p class="text-xl font-semibold text-white">Present Week</p>
 </div>
 <div class="mt-6 flex justify-center space-x-4">
-<div class="bg-orange-700 text-white px-4 py-2 rounded-lg shadow-md text-center">
+<div class="bg-gray-200 text-green-500  font-bold px-4 py-2 rounded-lg shadow-lg shadow-black-500/50 text-center transform hover:scale-105 transition duration-300 ease-in-out">
 Tested :20,000
 </div>
-<div class="bg-green-700 text-white px-4 py-2 rounded-lg shadow-md text-center">
+<div class="bg-gray-200 text-green-500 font-bold px-4 py-2 rounded-lg shadow-lg shadow-black-500/50 text-center transform hover:scale-105 transition duration-300 ease-in-out">
 Completed : 4,500
 </div>
 </div>
@@ -235,10 +235,10 @@ Completed : 4,500
 <p class="text-xl font-semibold text-white">Present Month</p>
 </div>
 <div class="mt-6 flex justify-center space-x-4">
-<div class="bg-orange-700 text-white px-4 py-2 rounded-lg shadow-md text-center">
+<div class="bg-gray-200 text-yellow-700 font-bold px-4 py-2 rounded-lg shadow-lg shadow-black-500/50 text-center transform hover:scale-105 transition duration-300 ease-in-out">
 Tested : 400,000
 </div>
-<div class="bg-green-700 text-white px-4 py-2 rounded-lg shadow-md text-center">
+<div class="bg-gray-200 text-yellow-700 font-bold  px-4 py-2 rounded-lg shadow-lg shadow-black-500/50 text-center transform hover:scale-105 transition duration-300 ease-in-out">
 Completed : 100,000
 </div>
 </div>
@@ -254,10 +254,10 @@ Completed : 100,000
 <p class="text-xl font-semibold text-white">Present Year</p>
 </div>
 <div class="mt-6 flex justify-center space-x-4">
-<div class="bg-orange-700 text-white px-4 py-2 rounded-lg shadow-md text-center">
+<div class="bg-gray-200 text-red-500 font-bold px-4 py-2 rounded-lg shadow-lg shadow-black-500/50 text-center transform hover:scale-105 transition duration-300 ease-in-out">
 Tested : 5,000,000
 </div>
-<div class="bg-green-700 text-white px-4 py-2 rounded-lg shadow-md text-center">
+<div class="bg-gray-200 text-red-500 font-bold  px-4 py-2 rounded-lg shadow-lg shadow-black-500/50 text-center transform hover:scale-105 transition duration-300 ease-in-out">
 Completed : 1,000,000
 </div>
 </div>
@@ -270,49 +270,49 @@ Completed : 1,000,000
 
 <div class="bg-white rounded-lg shadow-lg p-6 mt-3">
 
-  <h1 class="text-2xl font-bold text-center mb-6">Meter Testing Analysis Dashboard</h1>
-        
-        <!-- Main content grid -->
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
-            <!-- Charts section - 8 columns on large screens -->
-            <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-                <!-- Pie Chart -->
-                <div class="bg-white rounded-lg p-4 shadow">
-                    <h3 class="text-lg font-semibold mb-2">Status Distribution</h3>
-                    <div class="h-[300px] relative">
-                        <canvas id="pieChart"></canvas>
-                    </div>
-                </div>
-                
-                <!-- Bar Chart -->
-                <div class="bg-white rounded-lg p-4 shadow">
-                    <h3 class="text-lg font-semibold mb-2">Hourly Progress</h3>
-                    <div class="h-[300px] relative">
-                        <canvas id="barChart"></canvas>
-                    </div>
-                </div>
-            </div>
+<h1 class="text-2xl font-bold text-center mb-6">Meter Testing Analysis Dashboard</h1>
 
-            <!-- Table section - 4 columns on large screens -->
-            <div class="lg:col-span-4">
-                <div class="bg-white rounded-lg p-4 shadow overflow-auto max-h-[400px]">
-                    <h3 class="text-lg font-semibold mb-2">Metrics Table</h3>
-                    <table class="min-w-full">
-                        <thead class="bg-gray-50 sticky top-0">
-                            <tr>
-                                <th class="px-4 py-2 text-left text-sm font-medium text-gray-600">Time</th>
-                                <th class="px-4 py-2 text-right text-sm font-medium text-gray-600">Tested</th>
-                                <th class="px-4 py-2 text-right text-sm font-medium text-gray-600">Completed</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-200" id="metricsTable">
-                            <!-- Table content will be populated by JavaScript -->
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- Main content grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+<!-- Charts section - 8 columns on large screens -->
+<div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Pie Chart -->
+<div class="bg-white rounded-lg p-4 shadow">
+<h3 class="text-lg font-semibold mb-2">Status Distribution</h3>
+<div class="h-[300px] relative">
+<canvas id="pieChart"></canvas>
+</div>
+</div>
+
+<!-- Bar Chart -->
+<div class="bg-white rounded-lg p-4 shadow">
+<h3 class="text-lg font-semibold mb-2">Hourly Progress</h3>
+<div class="h-[300px] relative">
+<canvas id="barChart"></canvas>
+</div>
+</div>
+</div>
+
+<!-- Table section - 4 columns on large screens -->
+<div class="lg:col-span-4">
+<div class="bg-white rounded-lg p-4 shadow overflow-auto max-h-[400px]">
+<h3 class="text-lg font-semibold mb-2">Metrics Table</h3>
+<table class="min-w-full">
+<thead class="bg-gray-50 sticky top-0">
+<tr>
+<th class="px-4 py-2 text-left text-sm font-medium text-gray-600">Time</th>
+<th class="px-4 py-2 text-right text-sm font-medium text-gray-600">Tested</th>
+<th class="px-4 py-2 text-right text-sm font-medium text-gray-600">Completed</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200" id="metricsTable">
+<!-- Table content will be populated by JavaScript -->
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
 
 
 
