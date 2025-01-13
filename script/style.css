@@ -1,0 +1,115 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/poppins/v22/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/poppins/v22/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLEj6Z1JlFc-K.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  src: url(https://fonts.gstatic.com/s/poppins/v22/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  }
+  .pagination button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  }
+  
+  
+  @media (max-width: 768px) {
+  .pagination {
+  flex-direction: column;
+  align-items: center;
+  }
+  #dataTable {
+  display: block;
+  overflow-x: auto;
+  }
+  .pagination-info {
+  text-align: center;
+  }
+  }
+  
+  .pagination-numbers {
+      display: inline-block;
+      margin: 0 10px;
+  }
+  
+  .page-number {
+      padding: 5px 10px;
+      margin: 0 2px;
+      border: 1px solid #ddd;
+      background: #fff;
+      cursor: pointer;
+  }
+  
+  .page-number.active {
+      background: linear-gradient(319deg, royalblue 0%, rgba(65, 105, 225, 0.7) 37%, rgba(0, 0, 128, 0.7) 100%);
+      color: white;
+      border-color:  linear-gradient(319deg, royalblue 0%, rgba(65, 105, 225, 0.7) 37%, rgba(0, 0, 128, 0.7) 100%);
+  }
+  
+  .page-number:hover:not(.active) {
+      background: #f0f0f0;
+  }
+  
+  .chart-container {
+      position: relative;
+      height: 400px;
+      width: 100%;
+      margin-top: 1rem;
+  }
+  .chart-wrapper {
+      overflow-x: auto;
+      margin-bottom: 1rem;
+  }
+
+  .sidebar-collapsed .dropdown-content {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 200px;
+    z-index: 50;
+    margin-left: 0.5rem;
+  }
+  
+  .sidebar-collapsed .nav-text {
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar-collapsed {
+      width: 0;
+      overflow: hidden;
+    }
+  }
+
+  

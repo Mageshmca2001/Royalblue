@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BGT-Dashboard</title>
+
+<!-- Tailwind CSS -->
+<script src="../script/tailwindcss.css"></script>
+
+<!-- Custom CSS -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="../script/style.css">
+<link rel="shortcut icon" href="../script/lg.png" />
+</head>
+
+<body class="bg-gray-100">
+<!-- Fixed Icons Container -->
+<div class="fixed top-2 right-3 z-50 flex items-center space-x-2">
+
+<button class="text-white hover:bg-custom-gradient rounded-lg p-2">
+<i class='bx bxs-bell text-white text-2xl'></i>
+</button>
+
+<div class="relative inline-block w-full sm:w-auto">
+<!-- Button -->
+<button
+onclick="toggleDropdown('adminDropdown')"
+class="flex items-center justify-between w-full sm:w-auto text-white hover:bg-custom-gradient rounded-lg p-2"
+>
+<i class="bx bxs-user-detail text-white text-2xl"></i>
+<span class="ml-2 text-white font-medium hidden sm:inline">A</span>
+<i id="dropdownIcon" class="bx bx-chevron-down ml-2 text-white"></i>
+</button>
+
+<!-- Dropdown -->
+<ul
+id="adminDropdown"
+class="hidden absolute left-0 sm:right-0 mt-2 w-full sm:w-48 bg-white rounded-lg shadow-lg"
+>
+<li>
+<button
+onclick="logout()"
+class="block w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-t-lg flex items-center justify-center sm:justify-start"
+>
+<!-- Icon for mobile -->
+<i class="bx bx-log-out text-xl sm:hidden"></i>
+<!-- Text for larger screens -->
+<span class="hidden sm:inline">Logout</span>
+</button>
+</li>
+</ul>
+</div>
+
+
+</div>
+
+<!-- Overlay for mobile -->
+<div id="overlay" class="sidebar-overlay fixed inset-0 z-30 hidden bg-black bg-opacity-50 md:bg-opacity-0"></div>
+
+<!-- Sidebar -->
+<aside id="sidebar" class="fixed top-0 left-0 z-50 h-screen transition-all duration-300 ease-in-out w-64"
+style="background: linear-gradient(319deg, royalblue 0%, rgba(65, 105, 225, 0.7) 37%, rgba(0, 0, 128, 0.7) 100%), url('../script/Mac.jpg'); background-size: cover; background-position: center;">
+
+<!-- Updated logo section -->
+<div class="logo-container flex items-center justify-between p-2 border-b border-white">
+<div class="flex items-center min-w-0">
+<div class="flex-shrink-0 bg-white p-2 rounded-lg shadow-md">
+<img src="../script/lg.png" alt="Logo" class="w-8 h-8  object-cover">
+</div>
+<span class="nav-text ml-3 text-white text-base1 font-bold font-['Poppins'] truncate">BGT Dashboard</span>
+</div>
+<button id="closeSidebarBtn" class="text-gray-400 hover:text-white p-2 md:hidden ml-2">
+<i class='bx bx-x text-white text-3xl'></i>
+</button>
+</div>
+
+<div class="h-full px-3 py-4 overflow-y-auto">
+<ul class="space-y-2">
+<!-- Dashboard Item -->
+<li>
+<a href="index.html" class="flex items-center p-3 text-white rounded-lg hover:bg-gray-200 group">
+<i class='bx bxs-dashboard text-xl text-white group-hover:text-black flex-shrink-0'></i>
+<span class="nav-text ml-3 text-white group-hover:text-black font-['Poppins'] truncate">Dashboard</span>
+</a>
+</li>
+
+<li class="relative">
+<button
+class="dropdown-trigger flex items-center w-full p-3 text-white rounded-lg hover:bg-gray-200 group"
+>
+<i class="bx bxs-file text-xl text-white group-hover:text-black flex-shrink-0"></i>
+<span class="nav-text ml-3 text-white group-hover:text-black font-['Poppins'] truncate">Reports</span>
+<i class="dropdown-arrow bx bx-chevron-down ml-auto text-white group-hover:text-black"></i>
+</button>
+<ul class="dropdown-content hidden mt-2 space-y-2 bg-gray-200 rounded-lg">
+<li>
+<a href="Dailyreports.html" class="flex items-center px-3 py-2 text-gray-800 rounded-lg hover:bg-white">
+<i class="bx bx-timer text-base text-gray-800 flex-shrink-0"></i>
+<span class="nav-text ml-2 truncate">Daily Reports</span>
+</a>
+</li>
+
+<li>
+<a
+href="monthlyreports.html"
+class="flex items-center p-2 text-gray-800 rounded-lg  hover:bg-white"
+>
+<i class="bx bx-calendar-week text-lg text-gray-800"></i>
+<span class="ml-2">Monthly Reports</span>
+</a>
+</li>
+<li>
+<a
+href="meterreports.html"
+class="flex items-center p-2 text-gray-800 rounded-lg hover:bg-white"
+>
+<i class="bx bx-calendar-star text-lg text-gray-800"></i>
+<span class="ml-2">Meter Reports </span>
+</a>
+</li>
+</ul>
+</li>
+
+<li>
+<a href="user.html" class="flex items-center p-3 text-white rounded-lg hover:bg-gray-200 group">
+<i class='bx bxs-group text-xl text-white group-hover:text-black flex-shrink-0'></i>
+<span class="nav-text ml-3 text-white group-hover:text-black font-['Poppins'] truncate">Users</span>
+</a>
+</li>
+</ul>
+</div>
+</aside>
+
+<!-- Header and Main Content -->
+<div id="main-content" class="min-h-screen flex flex-col transition-all duration-300 ease-in-out">
+<!-- Header -->
+<header class="bg-custom-gradient fixed w-full z-40 transition-all duration-300 ease-in-out">
+<div class="flex items-center h-14 px-3">
+<div class="flex items-center flex-grow">
+<button  id="toggleButton" class="text-white bg-transparent hover:bg-custom-gradient rounded-lg p-2 flex items-center justify-center transition-colors duration-300"aria-label="Toggle Menu">
+<i class="bx bx-menu text-white text-2xl group-hover:text-black transition-colors duration-300"></i>
+</button>
+
+<h1 class="text-white font-bold font-['Poppins'] ml-2">Welcome to BGT Dashboard</h1>
+</div>
+<!-- Placeholder div to maintain header height -->
+<div class="w-24"></div>
+</div>
+</header>
+
+
+
+
+<!-- Main Content -->
+
+
+<main class="flex-1 p-2 mt-16">
+
+<div 
+class="text-3xl font-bold font-['Poppins'] px-6 p-2" 
+style="background: linear-gradient(319deg, royalblue 0%, rgba(65, 105, 225, 0.7) 37%, rgba(0, 0, 128, 0.7) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;"
+>
+Dashboard
+</div>
+
+
+<h1 class=" text-1xl text-gray-600 font-bold font-['poppins'] px-6  p-1">Management Information System </h1>
+
+<div class="bg-white rounded-lg shadow-lg p-6 mt-3">
+<!-- Grid container -->
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<!-- Present Day -->
+<div class="relative bg-blue-400 p-6 rounded-lg shadow-xl hover:scale-105 transform transition duration-300 ease-in-out">
+<div class="absolute top-4 right-4">
+<i class="bx bx-timer text-black text-7xl opacity-40"></i>
+</div>
+<div>
+<h2 class="text-2xl font-bold text-white">3000</h2>
+<p class="text-xl font-semibold text-white">Present Day</p>
+</div>
+<div class="mt-6 flex justify-center space-x-4">
+
+<div class="bg-orange-500 text-white text-base3 font-bold px-6 py-3 rounded-lg shadow-lg shadow-black-500/50 text-center transform hover:scale-105 transition duration-300 ease-in-out">
+Tested : 3000
+</div>
+<div class="bg-green-500 text-white text-base3  font-bold px-6 py-3 rounded-lg shadow-lg shadow-black-500/50 text-center transform hover:scale-105 transition duration-300 ease-in-out">
+Completed : 500
+</div>
+
+
+</div>
+</div>
+
+<!-- Present Week -->
+<div class="relative bg-purple-600 p-6 rounded-lg shadow-xl hover:scale-105 transform transition duration-300 ease-in-out">
+<div class="absolute top-4 right-4">
+<i class="bx bx-calendar text-black text-7xl opacity-40"></i>
+</div>
+<div>
+<h2 class="text-2xl font-bold text-white">24,500</h2>
+<p class="text-xl font-semibold text-white">Present Week</p>
+</div>
+<div class="mt-6 flex justify-center space-x-4">
+
+<div class="bg-orange-500 text-white text-base3 font-bold px-6 py-3 rounded-lg shadow-lg shadow-black-500/50 text-center transform hover:scale-105 transition duration-300 ease-in-out">
+Tested : 3000
+</div>
+<div class="bg-green-500 text-white text-base3  font-bold px-6 py-3 rounded-lg shadow-lg shadow-black-500/50 text-center transform hover:scale-105 transition duration-300 ease-in-out">
+Completed : 500
+</div>
+
+</div>
+</div>
+
+<!-- Present Month -->
+<div class="relative bg-magenta-400 p-6 rounded-lg shadow-xl hover:scale-105 transform transition duration-300 ease-in-out">
+<div class="absolute top-4 right-4">
+<i class="bx bx-calendar text-black text-7xl opacity-40"></i>
+</div>
+<div>
+<h2 class="text-2xl font-bold text-white">540,000</h2>
+<p class="text-xl font-semibold text-white">Present Month</p>
+</div>
+<div class="mt-6 flex justify-center space-x-4">
+<div class="bg-orange-500 text-white text-base3 font-bold px-4 py-2 rounded-lg shadow-lg shadow-black-500/50 text-center transform hover:scale-105 transition duration-300 ease-in-out">
+Tested : 400,000
+</div>
+<div class="bg-green-500 text-white  font-bold  px-4 py-2 rounded-lg shadow-lg shadow-black-500/50 text-center transform hover:scale-105 transition duration-300 ease-in-out">
+Completed : 100,000
+</div>
+</div>
+</div>
+
+<!-- Present Year -->
+<div class="relative bg-red-500 p-6 rounded-lg shadow-xl hover:scale-105 transform transition duration-300 ease-in-out">
+<div class="absolute top-4 right-4">
+<i class="bx bx-folder-minus text-black text-7xl opacity-40"></i>
+</div>
+<div>
+<h2 class="text-2xl font-bold text-white">6,480,000</h2>
+<p class="text-xl font-semibold text-white">Present Year</p>
+</div>
+<div class="mt-6 flex justify-center space-x-4">
+<div class="bg-orange-500 text-white font-bold px-4 py-2 rounded-lg shadow-lg shadow-black-500/50 text-center transform hover:scale-105 transition duration-300 ease-in-out">
+Tested : 5,000,000
+</div>
+<div class="bg-green-500 text-white font-bold  px-4 py-2 rounded-lg shadow-lg shadow-black-500/50 text-center transform hover:scale-105 transition duration-300 ease-in-out">
+Completed : 1,000,000
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+<div class="bg-white rounded-lg shadow-lg p-6 mt-3">
+
+<h1 class="text-2xl text-gray-700 font-bold text-center mb-6" >Meter Testing Analysis Dashboard</h1>
+
+<!-- Main content grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+<!-- Charts section - 8 columns on large screens -->
+<div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Pie Chart -->
+<div class="bg-white rounded-lg p-4 shadow">
+<h3 class="text-lg text-gray-800 font-semibold mb-2">Status Distribution</h3>
+<div class="h-[300px] relative">
+<canvas id="pieChart"></canvas>
+</div>
+</div>
+
+<!-- Bar Chart -->
+<div class="bg-white rounded-lg p-4 shadow">
+<h3 class="text-lg text-gray-800 font-semibold mb-2">Hourly Progress</h3>
+<div class="h-[300px] relative">
+<canvas id="barChart"></canvas>
+</div>
+</div>
+</div>
+
+<!-- Table section - 4 columns on large screens -->
+<div class="lg:col-span-4">
+<div class="bg-white rounded-lg p-4 shadow overflow-auto max-h-[400px]">
+<h3 class="text-lg text-gray-800 font-semibold mb-2">Metrics Table</h3>
+<table class="min-w-full">
+<thead class="bg-gray-50 sticky top-0">
+<tr>
+<th class="px-4 py-2 text-left text-sm font-medium text-gray-600">Time</th>
+<th class="px-4 py-2 text-right text-sm font-medium text-gray-600">Tested</th>
+<th class="px-4 py-2 text-right text-sm font-medium text-gray-600">Completed</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-gray-200" id="metricsTable">
+<!-- Table content will be populated by JavaScript -->
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+
+
+
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+royalPurple: '#8a00c2',
+Purple:'#4c00b0'
+},
+},
+},
+};
+
+</script>
+</div>
+<script src="../script/ch.js"></script>
+<script src="chart.js"></script>
+<script src="logout.js"></script>
+<script src="index.js"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+magenta: {
+50: '#fdf4ff',
+100: '#fae8ff',
+200: '#f5d0fe',
+300: '#f0abfc',
+400: '#e879f9',
+500: '#d946ef',
+600: '#c026d3',
+700: '#a21caf',
+800: '#86198f',
+900: '#701a75',
+},
+royalPurple: '#8a00c2',
+Purple: '#4c00b0',
+blue1:'#305CDE',
+royalblue: '#4169E1'
+},
+
+backgroundImage: {
+'custom-gradient': 'linear-gradient(319deg, royalblue 0%, rgba(65, 105, 225, 0.7) 37%, rgba(0, 0, 128, 0.7) 100%)',
+},
+fontSize: {
+base: '20px',
+base1: '15px',
+base2:'22px',
+base3:'15px',
+},
+fontFamily: {
+custom: ['poppins', 'sans-serif'],
+},
+},
+},
+};
+</script>
+</body>
+</html>
