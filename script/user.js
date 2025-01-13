@@ -50,18 +50,18 @@ function renderTable(data = users) {
         tr.className = index % 2 === 0 ? 'bg-white' : 'bg-gray-50';
         
         tr.innerHTML = `
-            <td class="border border-gray-200 px-6 py-4 whitespace-nowrap text-center text-sm text-gray-900">${user.id}</td>
-            <td class="border border-gray-200 px-6 py-4 whitespace-nowrap text-center text-sm text-gray-900">${user.username}</td>
-            <td class="border border-gray-200 px-6 py-4 whitespace-nowrap text-center text-sm text-gray-900">${user.password}</td>
-            <td class="border border-gray-200 px-6 py-4 whitespace-nowrap text-center text-sm text-gray-900">${user.role}</td>
-            <td class="border border-gray-200 px-6 py-4 whitespace-nowrap text-center text-sm text-gray-900">
-                <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
-                    user.status === 'Active' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
+            <td class="border border-gray-400 px-6 py-4 whitespace-nowrap text-center text-sm text-gray-900">${user.id}</td>
+            <td class="border border-gray-400 px-6 py-4 whitespace-nowrap text-center text-sm text-gray-900">${user.username}</td>
+            <td class="border border-gray-400 px-6 py-4 whitespace-nowrap text-center text-sm text-gray-900">${user.password}</td>
+            <td class="border border-gray-400 px-6 py-4 whitespace-nowrap text-center text-sm text-gray-900">${user.role}</td>
+            <td class="border border-gray-400 px-6 py-4 whitespace-nowrap text-center text-sm text-gray-900">
+                <span class="px-2 inline-flex text-sm leading-5 font-semibold rounded-full ${
+                    user.status === 'Active' ? 'bg-green-200 text-green-800' : 'bg-red-100 text-red-800'
                 }">
                     ${user.status}
                 </span>
             </td>
-            <td class=" border border-gray-200 px-6 py-4 whitespace-nowrap text-center text-sm font-medium space-x-2">
+            <td class=" border border-gray-400 px-6 py-4 whitespace-nowrap text-center text-sm font-medium space-x-2">
                 <button onclick="editUser(${user.id})" class="text-blue-600 hover:text-blue-900">
                     <i class='bx bx-edit'></i> Edit
                 </button>
