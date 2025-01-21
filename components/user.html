@@ -210,117 +210,117 @@ Add User
 
 <!-- Form -->
 <div class="scale-80">
-    <form id="userForm" class="px-8 py-6 space-y-6 max-w-4xl mx-auto">
-      <!-- Username Field -->
-      <div class="space-y-2">
-        <label for="username" class="block text-sm font-medium text-gray-700">
-          Username
-        </label>
-        <div class="relative">
-          <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-            <i class="bx bx-user text-gray-400 text-lg md:text-xl"></i>
-          </div>
-          <input 
-            type="text" 
-            id="username" 
-            name="username" 
-            required
-            class="block w-full pl-12 pr-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-blue-300"
-            placeholder="Enter username"
-          >
-        </div>
-      </div>
-  
-      <!-- Password Field -->
-      <div class="space-y-2">
-        <label for="password" class="block text-sm font-medium text-gray-700">
-          Password
-        </label>
-        <div class="relative">
-          <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-            <i class="bx bx-lock-alt text-gray-400 text-lg md:text-xl"></i>
-          </div>
-          <input 
-            type="password" 
-            id="password" 
-            name="password" 
-            required
-            class="block w-full pl-12 pr-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-blue-300"
-            placeholder="Enter password"
-          >
-        </div>
-      </div>
-  
-      <!-- Role Field -->
-      <div class="space-y-2">
-        <label for="role" class="block text-sm font-medium text-gray-700">
-          Role
-        </label>
-        <div class="relative">
-          <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-            <i class="bx bx-user-circle text-gray-400 text-lg md:text-xl"></i>
-          </div>
-          <select 
-            id="role" 
-            name="role" 
-            required
-            class="block w-full pl-12 pr-10 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-blue-300 appearance-none bg-white"
-          >
-            <option value="" disabled selected>Select Role</option>
-            <option value="Admin">Admin</option>
-            <option value="User">User</option>
-            <option value="Manager">Manager</option>
-          </select>
-          <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
-            <i class="bx bx-chevron-down text-gray-400 text-lg md:text-xl"></i>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Status Field -->
-      <div class="space-y-2">
-        <label for="status" class="block text-sm font-medium text-gray-700">
-          Status
-        </label>
-        <div class="relative">
-          <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-            <i class="bx bx-toggle-right text-gray-400 text-lg md:text-xl"></i>
-          </div>
-          <select 
-            id="status" 
-            name="status" 
-            required
-            class="block w-full pl-12 pr-10 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-blue-300 appearance-none bg-white"
-          >
-            <option value="Active">Active</option>
-            <option value="Inactive">Inactive</option>
-          </select>
-          <div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
-            <i class="bx bx-chevron-down text-gray-400 text-lg md:text-xl"></i>
-          </div>
-        </div>
-      </div>
-  
-      <!-- Form Buttons -->
-      <div class="flex justify-end space-x-4 pt-6">
-        <button 
-          type="button" 
-          id="closeModalBtn"
-          class="px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-all duration-200 font-medium"
-        >
-          Cancel
-        </button>
-        <button 
-          type="submit"
-          class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-200 font-medium shadow-lg hover:shadow-xl"
-        >
-          Save Changes
-        </button>
-      </div>
-    </form>
-  </div>
-  
-  
+<form id="userForm" class="px-8 py-6 space-y-6 max-w-4xl mx-auto">
+<!-- Username Field -->
+<div class="space-y-2">
+<label for="username" class="block text-sm font-medium text-gray-700">
+Username
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<i class="bx bx-user text-gray-400 text-lg md:text-xl"></i>
+</div>
+<input 
+type="text" 
+id="username" 
+name="username" 
+required
+class="block w-full pl-12 pr-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-blue-300"
+placeholder="Enter username"
+>
+</div>
+</div>
+
+<!-- Password Field -->
+<div class="space-y-2">
+<label for="password" class="block text-sm font-medium text-gray-700">
+Password
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<i class="bx bx-lock-alt text-gray-400 text-lg md:text-xl"></i>
+</div>
+<input 
+type="password" 
+id="password" 
+name="password" 
+required
+class="block w-full pl-12 pr-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-blue-300"
+placeholder="Enter password"
+>
+</div>
+</div>
+
+<!-- Role Field -->
+<div class="space-y-2">
+<label for="role" class="block text-sm font-medium text-gray-700">
+Role
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<i class="bx bx-user-circle text-gray-400 text-lg md:text-xl"></i>
+</div>
+<select 
+id="role" 
+name="role" 
+required
+class="block w-full pl-12 pr-10 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-blue-300 appearance-none bg-white"
+>
+<option value="" disabled selected>Select Role</option>
+<option value="Admin">Admin</option>
+<option value="User">User</option>
+<option value="Manager">Manager</option>
+</select>
+<div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
+<i class="bx bx-chevron-down text-gray-400 text-lg md:text-xl"></i>
+</div>
+</div>
+</div>
+
+<!-- Status Field -->
+<div class="space-y-2">
+<label for="status" class="block text-sm font-medium text-gray-700">
+Status
+</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<i class="bx bx-toggle-right text-gray-400 text-lg md:text-xl"></i>
+</div>
+<select 
+id="status" 
+name="status" 
+required
+class="block w-full pl-12 pr-10 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 hover:border-blue-300 appearance-none bg-white"
+>
+<option value="Active">Active</option>
+<option value="Inactive">Inactive</option>
+</select>
+<div class="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none">
+<i class="bx bx-chevron-down text-gray-400 text-lg md:text-xl"></i>
+</div>
+</div>
+</div>
+
+<!-- Form Buttons -->
+<div class="flex justify-end space-x-4 pt-6">
+<button 
+type="button" 
+id="closeModalBtn"
+class="px-6 py-3 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-all duration-200 font-medium"
+>
+Cancel
+</button>
+<button 
+type="submit"
+class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all duration-200 font-medium shadow-lg hover:shadow-xl"
+>
+Save Changes
+</button>
+</div>
+</form>
+</div>
+
+
 
 </div>
 </div>
