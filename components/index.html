@@ -276,61 +276,32 @@ Completed:1,480,000
 <!-- Main content grid -->
 
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="grid grid-cols-1 md:grid-cols-5 gap-6">
 
-<!-- Charts section - 8 columns on large screens -->
-
-<div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-
-<!-- Pie Chart -->
-
-<div class="bg-white rounded-lg p-4 shadow">
-<h3 class="text-lg text-gray-800 font-semibold mb-2">Status Distribution</h3>
-<div class="h-[300px] relative">
-<canvas id="pieChart"></canvas>
-</div>
-</div>
-
-
-
-<!-- Bar Chart -->
-
-<div class="bg-white rounded-lg p-4 shadow">
-    <h3 class="text-lg text-gray-800 font-semibold mb-2">Hourly Progress</h3>
-    <div class="h-[300px] relative">
-    <canvas id="barChart"></canvas>
+    <!-- Pie Chart - 40% width on medium screens and above -->
+    <div class="bg-white rounded-lg shadow-lg p-6 mb-6 md:col-span-1">
+  
+      <div class="relative h-[300px]">
+        <canvas id="pieChart"></canvas>
+      </div>
+  
     </div>
+  
+    <!-- Bar Chart - 60% width on medium screens and above -->
+    <div class="bg-white rounded-lg shadow-lg p-6 mb-6 md:col-span-4">
+  
+      <div class="relative h-[300px]">
+        <canvas id="barChart"></canvas>
+      </div>
+  
     </div>
-</div>
-
-<!-- Table section - 4 columns on large screens -->
-
-<!-- <div class="lg:col-span-4">
- <div class="bg-white rounded-lg p-4 shadow overflow-auto max-h-[400px]">
-<h3 class="text-lg text-gray-800 font-semibold mb-2">Metrics Table</h3>
-<table class="min-w-full">
-<thead class="bg-gray-50 sticky top-0">
-<tr>
-<th class="px-4 py-2 text-left text-sm font-medium text-gray-600">Time</th>
-<th class="px-4 py-2 text-right text-sm font-medium text-gray-600">Tested</th>
-<th class="px-4 py-2 text-right text-sm font-medium text-gray-600">Completed</th>
-</tr>
-</thead>
-<tbody class="divide-y divide-gray-200" id="metricsTable">
-
-
-
-<! Table content will be populated by JavaScript
-
-</tbody>
-</table>
-</div>
-</div> -->
+  
+  </div>
+  
+  
 
 
 </div>
-</div>
-
 
 </main>
 

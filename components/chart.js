@@ -9,9 +9,9 @@ reworked: [500, 500, 1000, 2000, 1000 , 3500, 4500, 7000, 7000 ,3000, 3500, 4500
 
 // Create Pie Chart
 const pieCtx = document.getElementById('pieChart').getContext('2d');
-const totalTested = metricsData.tested[metricsData.tested.length - 1];
-const totalCompleted = metricsData.completed[metricsData.completed.length - 1];
-const totalReworked = metricsData.reworked[metricsData.reworked.length - 1];
+const totalTested = metricsData.tested[metricsData.tested.length - 5];
+const totalCompleted = metricsData.completed[metricsData.completed.length - 3];
+const totalReworked = metricsData.reworked[metricsData.reworked.length - 4];
 const inProgress = totalTested - totalCompleted - totalReworked;
 
 new Chart(pieCtx, {
