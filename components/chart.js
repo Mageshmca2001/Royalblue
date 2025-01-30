@@ -1,9 +1,10 @@
 // Sample data
-const timeData = ['08:00', '10:00', '12:00', '14:00', '16:00'];
+
+const timeData = ['08:00', '10:00', '12:00', '14:00', '16:00' ,'18:00', '20:00', '22:00', '00:00', '02:00', '04:00', '06:00'];
 const metricsData = {
-tested: [2000, 3500, 4500, 7000, 7000],
-completed: [1000, 2500, 2500, 4000, 5000],
-reworked: [500, 500, 1000, 2000, 1000]
+tested: [2000, 3500, 4500, 7000, 7000 ,3000, 3500, 4500, 5000, 8000 ,4000, 3000],
+completed: [1000, 2500, 2500, 4000, 5000 , 3500, 4500, 7000, 7000 ,3000, 3500, 4500,],
+reworked: [500, 500, 1000, 2000, 1000 , 3500, 4500, 7000, 7000 ,3000, 3500, 4500,]
 };
 
 // Create Pie Chart
@@ -39,6 +40,8 @@ labels: { font: { size: 12 } }
 });
 
 // Create Bar Chart
+
+
 const barCtx = document.getElementById('barChart').getContext('2d');
 new Chart(barCtx, {
 type: 'bar',
