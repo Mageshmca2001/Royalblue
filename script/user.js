@@ -34,8 +34,16 @@ function attachEventListeners() {
 function loadUsers() {
     // Simulated initial data - replace with API call
     users = [
+
         { id: 1, username: 'Nagarajan', password: 'Nagarajan@1989', role: 'Admin', status: 'Active' },
-        { id: 2, username: 'ranjthi', password: 'RanjthiKumar@008', role: 'User', status: 'Active' }
+        { id: 2, username: 'ranjthi', password: 'RanjthiKumar@008', role: 'Operator', status: 'Active' },
+        { id: 3, username: 'Magesh', password: 'Magesh2001@007', role: 'Operator', status: 'Active' },
+        { id: 4, username: 'Kumar', password: 'Kumar@001', role: 'Operator', status: 'Active' },
+        { id: 5, username: 'kamaleshwaran', password: 'Kamalesh@001', role: 'Operator', status: 'Active' },
+        { id: 6, username: 'kamal', password: 'Kamalraj@001', role: 'Manager', status: 'Active' },
+        { id: 7, username: 'Barath', password: 'Barath@009', role: 'Admin', status: 'Active' },
+        { id: 8, username: 'Dhanush', password: 'Dahnush@008', role: 'Manager', status: 'Active' }
+        
     ];
     renderTable();
 }
